@@ -40,7 +40,29 @@
 
 
     </head>
-<body>
+    <script>
+      async function obtenerServicios() {
+        const response = await fetch("Servicios.json");
+        const json = await response.json();
+        console.log(json);
+
+        let datos = document.getElementById("listaServiciosJson");
+    let texto = "";
+
+    texto = " <ul> ";
+    json.forEach(element => {
+          
+      texto += "'<li>'"+json.nombre+ "'</li>'";
+    });
+    texto += " </ul> ";
+
+    datos.innerHTML = texto;
+
+        
+        
+      }        
+    </script>
+<body  onload="obtenerServicios()">
   <a href="https://wa.me/50671119228?text=Hola!%20%0AQuisiera%20realizar%20una%20reserva%20para%20mi%20perrito" class="btn-wsp" target="_blank">
     <i class="fa fa-whatsapp icono" id="icoWhat"></i>
 </a>
@@ -103,9 +125,11 @@
                 de poder disfrutar una zona donde poder jugar, a pesar de estar sin su familia, no sintieran el estrés de la separación 
                 y su estadía lejos de su hogar no fuera motivo de sufrimiento sino de alegría.
               </p>
-
               <h4>Ofrecemos: </h4>
-              <ul>
+              <div id="listaServiciosJson">
+
+             
+             <!-- <ul>
                 <li><i class="fas fa-bone"></i> Zonas Verdes Espaciosas</li> 
                 <li><i class="fas fa-dog"></i> Vigilancia 24/7</li>              
                 <li><i class="fas fa-bone"></i> Caminatas </li>
@@ -113,7 +137,8 @@
                 <li><i class="fas fa-bone"></i> Baños </li>
                 
               </ul>
-
+              -->
+            </div>
              
              
               
@@ -124,12 +149,11 @@
       </section><!-- End About Section -->
   
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      
+    <section id="portfolio" class="portfolio">      
      
       <div class="container">
         <div class="row portfolio-container">     
-          <h4>Algunos de nuestros huespedes</h4>
+          <h4>Galeria de imagenes de nuestros amigos</h4>
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="./img/goldens.jpg" class="img-fluid" alt="">
@@ -163,12 +187,48 @@
                 <div class="portfolio-links">
                   <a href="./img/pupyBruno.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="pupyBruno"><i class="bx bx-plus"></i></a>              
                 </div>
-              </div>
-       
+              </div>       
           </div>
-
         </div>
       </div>
+      <div class="row portfolio-container">       
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="./img/cuartetoFeliz.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Cuarteto Feliz</h4>
+              <p>Una ternurita</p>
+              <div class="portfolio-links">
+                <a href="./img/cuartetoFeliz.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Goldens"><i class="bx bx-plus"></i></a>              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="./img/capone.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Capone</h4>
+              <p>Energía inagotable</p>
+              <div class="portfolio-links">
+                <a href="./img/capone.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="pupyBruno"><i class="bx bx-plus"></i></a>              
+              </div>
+            </div>     
+        </div>
+      </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="./img/chiquiRocky.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Gemelos</h4>
+              <p>Traviesos y adorables</p>
+              <div class="portfolio-links">
+                <a href="./img/chiquiRocky.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bruno"><i class="bx bx-plus"></i></a>              
+              </div>
+            </div>
+          </div>
+        </div>     
+    </div>
       </div>
     </section><!-- End Portfolio Section -->
 
