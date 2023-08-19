@@ -97,12 +97,16 @@
                      <li><i class="fas fa-dog"></i> Secado y peinado  </li>   
                      
                    </ul> 
-                   <h4>Precios: </h4>
+                   <!-- <h4>Precios: </h4>
                    <ul>
                      <li><i class="fas fa-bone"></i> Caninos pequeños y medianos ₡7000 </li> 
                      <li><i class="fas fa-dog"></i> Caninos grandes  ₡10 000 </li>   
                      
-                   </ul> 
+                   </ul> -->
+                   <h4>Calculadora de precio de baño por peso: </h4>
+                   <i class="fas fa-dog"></i> Peso (kg): <input type="number"  name="cantPeso" id="cantPeso"   min="0.5" max="80" onchange="calcularBano(this.value)"/><br>
+                   Precio <span id="precio" name="precio"></span>
+
                    </div>
                    <div class="col-lg-4 pt-4 pt-lg-0">
                     <img src="./img/bano.jpg" class="img-fluid" alt="">
