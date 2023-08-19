@@ -11,7 +11,7 @@ function closeNav(){
 
 
 
-
+//Calculos: Edad
 function calcularEdad(fechaNacimiento) {
   var fechaProcesada = new Date(fechaNacimiento);
   
@@ -35,7 +35,72 @@ function calcularEdad(fechaNacimiento) {
 }
 
 
+//Calculos: precio caminatas
+function calcularCaminata(canthoras) {  
+  var precio = document.getElementById("precio");
+  var res=0;  
+  if (canthoras>0 && canthoras<1 ) {
+    res = 1500;
+  }
+  if (canthoras>=1 && canthoras<2 ) {
+    res = 2500;
+  }
+  if (canthoras>=2 && canthoras<4 ) {
+    res = 4000;
+  }
+  if (canthoras>=4 && canthoras<6 ) {
+    res = 7000;
+  }
+  if (canthoras>=6 && canthoras<=8 ) {
+    res = 9500;
+  }
+   if(canthoras<=0){
 
+    alert("Por favor digite una cantidad de horas correcta");
+    res=0;
+    return;
+  }
+  if(canthoras>8){
+
+    alert("Por favor digite máximo 8 horas");
+    res=0;
+    return;
+  }
+  precio.innerHTML = " ₡"+res;   
+}
+
+
+//Calculos: precio banos
+function calcularBano(cantPeso) {  
+  var precio = document.getElementById("precio");
+  var res=0;  
+  if (cantPeso>0 && cantPeso<10 ) {
+    res = 7000;
+  }
+  if (cantPeso>=10 && cantPeso<20 ) {
+    res = 8500;
+  }
+  if (cantPeso>=20 && cantPeso<30 ) {
+    res = 10500;
+  }
+  if (cantPeso>=30 && cantPeso<50 ) {
+    res = 12500;
+  }
+  if (cantPeso>=50 && cantPeso<80 ) {
+    res = 14500;
+  }
+  if (cantPeso>=80   ) {
+    res = 20000;
+  }
+   if(cantPeso<=0){
+
+    alert("Por favor digite un peso correcto");
+    res=0;
+    return;
+  }
+ 
+  precio.innerHTML = " ₡"+res;   
+}
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
