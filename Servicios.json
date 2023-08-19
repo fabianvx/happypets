@@ -1,18 +1,18 @@
 
 [
-  {
-    "nombre": "Zonas Verdes Espaciosas"    
-  },
-  {
-    "nombre": "Vigilancia 24/7"   
-  },
-  {
-    "nombre": "Caminatas"
-  }
-  {
-    "nombre": "Masajes"
-  }
-  {
-    "nombre": "Baños"
-  }
-]
+    {
+      "nombre": "Zonas Verdes Espaciosas"    
+    },
+    {
+      "nombre": "Vigilancia 24/7"   
+    },
+    {
+      "nombre": "Caminatas"
+    },
+    {
+      "nombre": "Masajes"
+    },
+    {
+      "nombre": "Baños"
+    }
+  ]
