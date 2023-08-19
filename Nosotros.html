@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+ <head>
+        <meta charset="UTF-8" />        
+        <meta title="Happy Pets" />
+        <meta description="Sitio web de hotel canino" />
+        <meta name = "keywords" content="Perro, Dog, Hotel Canino, Perruno, Happy Pets" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="author" content="Enrique Fabian Ramirez Ramos" />
+
+   
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!--Libreria Carrusel-->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>     
+        <!-- Libreria BootStrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <!-- iconos-->
+      <script src="https://kit.fontawesome.com/9c6b6ae472.js" crossorigin="anonymous"></script>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+
+
+        <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+    </head>
+<body>
+   <header class="header">
+     <!-- Menu-->
+    <div class="logo">        
+        <a href="index.html"><img src="./img/LogoHappyPets.png" alt="Logo Happy-Pets"></a>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li class="dropdown"><a href="Servicios.html"><span>Servicios</span> <i class="fa-solid fa-angle-down"></i></a>
+                <ul>
+                  <li><a href="Caminatas.html">Caminatas</a></li>
+                    <li><a href="Cuido.html">Cuido</a></li>
+                    <li><a href="Banos.html">Baño</a></li>
+                   
+                </ul>
+            </li>
+            <li><a href="AcercaDe.html">Acerca De</a></li>
+                   
+        </ul>
+    </nav>
+    <a href="Contacto.html" class="btn" id ="btn-contacto"><button>Contacto</button></a>
+ <!--Fin Menu-->
+    <!--Menu Responsive-->
+    <a onclick="openNav()"  class="menu"><button>Menu</button></a>
+    <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" href="" class="close">&times;</a>
+        <div class="overlay-content">
+          <a href="Nosotros.html">Nosotros</a>
+          <a href="Servicios.html">Servicios</a>
+          <a href="Contacto.html">Contacto</a> 
+        <a href="AcercaDe.html">Acerca De</a>
+        </div>
+    </div>
+    <!--Fin Menu Responsive-->
+   </header>
+   <script type="text/javascript" src="nav.js"></script>
+
+       <!-- ======= About Section ======= -->
+       <section id="about" class="about">
+        <div class="container">
+  
+          <div class="row content">
+            <div class="col-lg-6">
+              <h2>Un poquito de</h2>
+              <h3>nuestra historia</h3>
+              <div class="pic"><img src="img/jardin6.jpg" class="img-fluid" alt=""></div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+              <h4>Sus inicios </h4>
+              <p class="parrafos">
+                Happy Pets fue creada en agosto del 2021 por Vanessa Chaverri y Catalina Oreamuno. Amantes de los caninos desde siempre, 
+                comprometidas en el bienestar de ellos. Su creación fue gracias a la experiencia que ellas tienen con las mascotas, 
+                muchas personas desde antes de su inicio las escogían para cuidar de sus niños de cuatro patas.     </p>
+                
+                <p class="parrafos">                
+                Sus clientes se dieron cuenta que toda mascota que se hospedaba en Happy Pets realmente se sentía amada y 
+                de poder disfrutar una zona donde poder jugar, a pesar de estar sin su familia, no sintieran el estrés de la separación 
+                y su estadía lejos de su hogar no fuera motivo de sufrimiento sino de alegría.
+              </p>
+
+              <h4>Ofrecemos: </h4>
+              <ul>
+                <li><i class="fas fa-bone"></i> Zonas Verdes Espaciosas</li> 
+                <li><i class="fas fa-dog"></i> Vigilancia 24/7</li>              
+                <li><i class="fas fa-bone"></i> Caminatas </li>
+                <li><i class="fas fa-dog"></i> Masajes </li>
+                <li><i class="fas fa-bone"></i> Baños </li>
+                
+              </ul>
+
+             
+             
+              
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Section -->
+  
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      
+     
+      <div class="container">
+        <div class="row portfolio-container">     
+          <h4>Algunos de nuestros huespedes</h4>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="./img/goldens.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Goldens</h4>
+                <p>Giannis & Edgard</p>
+                <div class="portfolio-links">
+                  <a href="./img/goldens.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Goldens"><i class="bx bx-plus"></i></a>              
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="./img/cokie.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Coqui</h4>
+                <p>El del retiro espiritual</p>
+                <div class="portfolio-links">
+                  <a href="./img/cokie.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bruno"><i class="bx bx-plus"></i></a>              
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="./img/pupyBruno.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Puppy & Bruno</h4>
+                <p>Los mejores amigos</p>
+                <div class="portfolio-links">
+                  <a href="./img/pupyBruno.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="pupyBruno"><i class="bx bx-plus"></i></a>              
+                </div>
+              </div>
+       
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+   <!--Pie de Pagina-->
+   <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="index.html"><img src="./img/LogoHappyPets.png" alt="Logo Happy-Pets"></a>
+            </figure>
+        </div>
+        <div class="box">            
+            <a href="Nosotros.html" class="enlace"><h2>Nosotros</h2></a> 
+            <a href="Servicios.html" class="enlace"><h2>Servicios</h2></a> 
+            <a href="Contacto.html" class="enlace" ><h2>Contacto</h2></a> 
+         </div>
+        <div class="box">
+            <h2>Siguenos en</h2>
+            <div class="red-social">
+              <a href="https://www.facebook.com/people/Happy-Pets/100070977630295/?mibextid=ZbWKwL" class="fa-brands fa-facebook"></a>
+              <a href="https://www.instagram.com/happy_pets03/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"class="fa-brands fa-instagram"></a>
+              <a href="https://www.tiktok.com/@happy_pets03?_r=1&_d=e90cimjjbgbb6k&sec_uid=MS4wLjABAAAAcEHoBgo0JWDladxEB_bmOE8ww4yqFTW4nDxbUDUL9m9bmKS5kGL8bz9dSIkRNLa_&share_author_id=6797469443275441158&sharer_language=es&source=h5_m&u_code=db4304b0db60aa&timestamp=1691287660&user_id=6797469443275441158&sec_user_id=MS4wLjABAAAAcEHoBgo0JWDladxEB_bmOE8ww4yqFTW4nDxbUDUL9m9bmKS5kGL8bz9dSIkRNLa_&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7261625703785957126&share_link_id=d90bf315-bdaf-4848-a5bb-9717e74f9e09&share_app_id=1233&ugbiz_name=Account&ug_btm=b8727%2Cb4907&social_share_type=5"class="fa-brands fa-tiktok"></a>
+         </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2023 Happy Pets - Todos los derechos reservados | Desarrollado por <a  id="link-desarrolladoPOr" href="DesarrolladoPor.html" class="enlace"><span>Enrique Fabian Ramirez Ramos</span></a>  </small>
+  </div>
+   </footer>
+
+   <!--Fin pie de Pagina-->
+</body>
+</html>

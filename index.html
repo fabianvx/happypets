@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+ <head>
+        <meta charset="UTF-8" />        
+        <meta title="Happy Pets" />
+        <meta description="Sitio web de hotel canino" />
+        <meta name = "keywords" content="Perro, Dog, Hotel Canino, Perruno, Happy Pets" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="author" content="Enrique Fabian Ramirez Ramos" />
+
+   
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!--Libreria Carrusel-->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>     
+        <!-- Libreria BootStrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <!-- iconos-->
+      <script src="https://kit.fontawesome.com/9c6b6ae472.js" crossorigin="anonymous"></script>
+
+
+        <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+    </head>
+<body>
+   <header class="header">
+     <!-- Menu-->
+    <div class="logo">        
+        <a href="index.html"><img src="./img/LogoHappyPets.png" alt="Logo Happy-Pets"></a>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li class="dropdown"><a href="Servicios.html"><span>Servicios</span> <i class="fa-solid fa-angle-down"></i></a>
+                <ul>
+                    <li><a href="Caminatas.html">Caminatas</a></li>
+                    <li><a href="Cuido.html">Cuido</a></li>
+                    <li><a href="Banos.html">Baño</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="AcercaDe.html">Acerca De</a></li>
+                    
+        </ul>
+    </nav>
+
+
+
+    <script>
+      const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://razas-de-perros.p.rapidapi.com/TypeOfBreeds',
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+		'X-RapidAPI-Host': 'razas-de-perros.p.rapidapi.com'
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+    </script>
+    <a href="Contacto.html" class="btn" id ="btn-contacto"><button>Contacto</button></a>
+ <!--Fin Menu-->
+    <!--Menu Responsive-->
+    <a onclick="openNav()"  class="menu"><button>Menu</button></a>
+    <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" href="" class="close">&times;</a>
+        <div class="overlay-content">
+            <a href="Nosotros.html">Nosotros</a> 
+            <a href="Servicios.html">Servicios</a>
+            <a href="Contacto.html">Contacto</a> 
+            <a href="AcercaDe.html">Acerca De</a> 
+        </div>
+    </div>
+    <!--Fin Menu Responsive-->
+   </header>
+   <script type="text/javascript" src="nav.js"></script>
+
+   
+ <!-- ======= Carrusel ======= --> 
+  
+  
+ <section id="hero">
+  <div id="heroCarousel" data-interval="2000" class="carousel slide carousel-fade" data-bs-ride="carousel">  
+
+    <div class="carousel-inner" >
+
+        <!-- Slide 1 -->
+  
+        <div class="carousel-item active" style="background-image: url(./img/Carrucel1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Sailor</span></h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+   
+
+        <!-- Slide 2 -->
+        
+        <div class="carousel-item  " style="background-image: url(./img/Carrucel2.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+      
+
+        <!-- Slide 3 -->
+      
+        <div class="carousel-item  " style="background-image: url(./img/Carrucel3.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">¡Vamos de paseo!</h2>
+              <p class="animate__animated animate__fadeInUp">En Happy Pets nos encargamos de sacar a pasear a tu canino para que gaste toda su energía de la manera más divertida.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto" id="masInfo">Más Info</a>
+            </div>
+          </div>
+        </div> 
+
+         <!-- Slide 4 -->
+      
+         <div class="carousel-item  " style="background-image: url(./img/Finca2.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">¡Vamos de paseo!</h2>
+              <p class="animate__animated animate__fadeInUp">En Happy Pets nos encargamos de sacar a pasear a tu canino para que gaste toda su energía de la manera más divertida.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto" id="masInfo">Más Info</a>
+            </div>
+          </div>
+        </div> 
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </section><!-- Fin de Carrusel -->
+
+
+
+   <!--Pie de Pagina-->
+   <footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="index.html"><img src="./img/LogoHappyPets.png" alt="Logo Happy-Pets"></a>
+            </figure>
+        </div>
+        <div class="box">            
+            <a href="Nosotros.html" class="enlace"><h2>Nosotros</h2></a> 
+            <a href="Servicios.html" class="enlace"><h2>Servicios</h2></a> 
+            <a href="Contacto.html" class="enlace" ><h2>Contacto</h2></a> 
+            
+         </div>
+        <div class="box">
+            <h2>Siguenos en</h2>
+            <div class="red-social">
+              <a href="https://www.facebook.com/people/Happy-Pets/100070977630295/?mibextid=ZbWKwL" class="fa-brands fa-facebook"></a>
+              <a href="https://www.instagram.com/happy_pets03/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"class="fa-brands fa-instagram"></a>
+              <a href="https://www.tiktok.com/@happy_pets03?_r=1&_d=e90cimjjbgbb6k&sec_uid=MS4wLjABAAAAcEHoBgo0JWDladxEB_bmOE8ww4yqFTW4nDxbUDUL9m9bmKS5kGL8bz9dSIkRNLa_&share_author_id=6797469443275441158&sharer_language=es&source=h5_m&u_code=db4304b0db60aa&timestamp=1691287660&user_id=6797469443275441158&sec_user_id=MS4wLjABAAAAcEHoBgo0JWDladxEB_bmOE8ww4yqFTW4nDxbUDUL9m9bmKS5kGL8bz9dSIkRNLa_&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7261625703785957126&share_link_id=d90bf315-bdaf-4848-a5bb-9717e74f9e09&share_app_id=1233&ugbiz_name=Account&ug_btm=b8727%2Cb4907&social_share_type=5"class="fa-brands fa-tiktok"></a>
+        </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 Happy Pets - Todos los derechos reservados | Desarrollado por <a  id="link-desarrolladoPOr" href="DesarrolladoPor.html" class="enlace"><span>Enrique Fabian Ramirez Ramos</span></a>  </small>
+    </div>
+   </footer>
+
+   <!--Fin pie de Pagina-->
+</body>
+</html>
