@@ -50,9 +50,10 @@
     let texto = "";
 
     texto = " <ul> ";
-    json.forEach(element => {
+     
+    json.forEach(element => console.log(element) {
           
-      texto += "'<li>'"+json.nombre+ "'</li>'";
+      texto += "'<li>'"+element.nombre+ "'</li>'";
     });
     texto += " </ul> ";
 
