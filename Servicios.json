@@ -1,15 +1,18 @@
 
 [
   {
-    "nombre": "Caminatas",
-    "descripcion": "Ofrecemos servicio de caminatas en la naturaleza para que tus caninos liberen su estrés y gasten su energía de la manera más divertida"
+    "nombre": "Zonas Verdes Espaciosas"    
   },
   {
-    "nombre": "Cuido",
-    "descripcion": "Contamos con vigilancia 24/7 por medio de las encargadas y las cámaras de las instalaciones, tu amigo de cuatro patas siempre estará seguro"
+    "nombre": "Vigilancia 24/7"   
   },
   {
-    "nombre": "Baños",
-    "descripcion": "Algunos perritos durante el hospedaje puede divertirse de más y ensuciarse un poco por ende esta es una opción para aquellas familias que quieren a su mascota siempre limpia."
+    "nombre": "Caminatas"
+  }
+  {
+    "nombre": "Masajes"
+  }
+  {
+    "nombre": "Baños"
   }
 ]
