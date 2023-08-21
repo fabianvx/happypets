@@ -47,15 +47,15 @@
   console.log(json);
 
   let datos = document.getElementById("listaServiciosJson");
-let texto = "";
+let texto;
 
-texto = " <ul> ";
+texto = "<ul>";
 
 json.forEach(element =>   {
     
-texto += "'<li>'"+element+ "'</li>'";
+texto += "<li>"+element.nombre+ "</li>";
 });
-texto += " </ul> ";
+texto += "</ul>";
 
 datos.innerHTML = texto;
 
