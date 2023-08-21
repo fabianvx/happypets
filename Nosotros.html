@@ -40,29 +40,7 @@
 
 
     </head>
-    <script>
-      async function obtenerServicios() {
-        const response = await fetch("./Servicios.json");
-        const json = await response.json();
-        console.log(json);
-
-        let datos = document.getElementById("listaServiciosJson");
-    let texto ;
-
-    texto = "<ul>";
-     
-    json.forEach(element =>   {
-          
-      texto += "<li>"+element.nombre+ "</li>";
-    });
-    texto += "</ul>";
-
-    datos.innerHTML = texto;
-
-        
-        
-      }        
-    </script>
+ 
 <body  onload="obtenerServicios()">
   <a href="https://wa.me/50671119228?text=Hola!%20%0AQuisiera%20realizar%20una%20reserva%20para%20mi%20perrito" class="btn-wsp" target="_blank">
     <i class="fa fa-whatsapp icono" id="icoWhat"></i>
@@ -233,7 +211,17 @@
       </div>
     </section><!-- End Portfolio Section -->
 
+    <div class="container "  >
+      <div id="testimonios" >
+        <h4>Nuestros testimonios </h4>   
+        <audio controls>
+          <source src="./img/Testimonio.mp3" type="audio/mp3">
+              Tu navegador no soporta audio HTML5.
+      </audio>
+      </div>  
+    </div> 
 
+ 
    <!--Pie de Pagina-->
    <footer class="pie-pagina">
     <div class="grupo-1">

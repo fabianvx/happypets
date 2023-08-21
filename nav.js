@@ -9,6 +9,28 @@ function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%";
 }
 
+//Obtener servicios consumiendo JSON
+async function obtenerServicios() {
+  const response = await fetch("./Servicios.json");
+  const json = await response.json();
+  console.log(json);
+
+  let datos = document.getElementById("listaServiciosJson");
+let texto = "";
+
+texto = " <ul> ";
+
+json.forEach(element =>   {
+    
+texto += "'<li>'"+element+ "'</li>'";
+});
+texto += " </ul> ";
+
+datos.innerHTML = texto;
+
+  
+  
+}   
 
 
 //Calculos: Edad
@@ -100,71 +122,6 @@ function calcularBano(cantPeso) {
   }
  
   precio.innerHTML = " ₡"+res;   
-}
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 10.01688810481482, lng: -84.2130290973807 },  
-    zoom: 9,
-  });
-  
-  infoWindow = new google.maps.InfoWindow();
-
-  const locationButton = document.createElement("button");
-
-  locationButton.textContent = "Ver mi ubicacion";
-  locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Ubicacion encontrada");
-          infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        },
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-}
-//Manejo de Errores
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation.",
-  );
-  infoWindow.open(map);
-}
-
-window.initMap = initMap;
-
-
-function calcularDistancia() {
-  // Obtener las coordenadas de los dos puntos
-  var punto1 = new google.maps.LatLng(9.936266379263435, -84.09252243680388); // San jose
-  var punto2 = new google.maps.LatLng(10.016841998823672, -84.21333899160999); // Alajuela
-  // Calcular la distancia entre los dos puntos en metros
-  var distancia = google.maps.geometry.spherical.computeDistanceBetween(punto1, punto2);
-
-  // Mostrar la distancia en la página
-  var distanciaKM = (distancia/1000).toFixed(2);
-  var resultado = document.getElementById("resultado");
-  resultado.innerHTML = "La distancia entre San Jose y Alajuela es de " + distanciaKM + " km.";
 }
 
 /**
