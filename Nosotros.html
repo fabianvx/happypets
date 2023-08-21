@@ -42,21 +42,23 @@
     </head>
  <script>
   async function obtenerServicios() {
+    console.log("me CAGO");
   const response = await fetch("./Servicios.json");
   const json = await response.json();
   console.log(json);
 
-  let datos = document.getElementById("listaServiciosJson");
+    console.log("me CAGO");
 let texto;
 
 texto = "<ul>";
 
 json.forEach(element =>   {
-    console.log("me CAGO");
+
 texto += "<li>"+element.nombre+ "</li>";
 });
 texto += "</ul>";
 
+     let datos = document.getElementById("listaServiciosJson");
 datos.innerHTML = texto;
 
   
