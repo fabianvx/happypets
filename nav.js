@@ -10,28 +10,29 @@ function closeNav(){
 }
 
 //Obtener servicios consumiendo JSON
-async function obtenerServicios() {
+  async function obtenerServicios() { 
   const response = await fetch("./Servicios.json");
   const json = await response.json();
-  console.log(json);
+ 
+ 
+let texto;
 
-  let datos = document.getElementById("listaServiciosJson");
-let texto = "";
+texto = "<ul>";
 
-texto = " <ul> ";
+   var elements = json;
 
-json.forEach(element =>   {
-    
-texto += "'<li>'"+element+ "'</li>'";
+elements.forEach(element =>   {
+
+texto += "<li>"+element.nombre+ "</li>";
 });
-texto += " </ul> ";
+texto += "</ul>";
 
+     let datos = document.getElementById("listaServiciosJson");
 datos.innerHTML = texto;
 
   
   
-}   
-
+} 
 
 //Calculos: Edad
 function calcularEdad(fechaNacimiento) {
