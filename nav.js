@@ -10,29 +10,7 @@ function closeNav(){
 }
 
 //Obtener servicios consumiendo JSON
-  async function obtenerServicios() { 
-  const response = await fetch("./Servicios.json");
-  const json = await response.json();
- 
- 
-let texto;
 
-texto = "<ul>";
-
-   var elements = json;
-
-elements.forEach(element =>   {
-
-texto += "<li>"+element.nombre+ "</li>";
-});
-texto += "</ul>";
-
-     let datos = document.getElementById("listaServiciosJson");
-datos.innerHTML = texto;
-
-  
-  
-} 
 
 //Calculos: Edad
 function calcularEdad(fechaNacimiento) {
