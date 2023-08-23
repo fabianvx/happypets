@@ -39,7 +39,32 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
     </head>
+
+<script>
+  async function obtenerServicios() { 
+  const response = await fetch("./Servicios.json");
+  const json = await response.json();
  
+ 
+let texto;
+
+texto = "<ul>";
+
+   var elements = json;
+
+elements.forEach(element =>   {
+
+texto += "<li>"+element.nombre+ "</li>";
+});
+texto += "</ul>";
+
+     let datos = document.getElementById("listaServiciosJson");
+datos.innerHTML = texto;
+
+  
+  
+} 
+</script>
 <body  onload="obtenerServicios()">
   
   <a href="https://wa.me/50671119228?text=Hola!%20%0AQuisiera%20realizar%20una%20reserva%20para%20mi%20perrito" class="btn-wsp" target="_blank">
