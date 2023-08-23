@@ -7,11 +7,9 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <meta name="author" content="Enrique Fabian Ramirez Ramos" />
 
-   
+      <!-- Hoja de estilos-->
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <!--Libreria Carrusel-->
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>     
+       
         <!-- Libreria BootStrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -38,36 +36,10 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-
     </head>
-
-<script>
-  async function obtenerServicios() { 
-  const response = await fetch("./Servicios.json");
-  const json = await response.json();
  
- 
-let texto;
-
-texto = "<ul>";
-
-   var elements = json;
-
-elements.forEach(element =>   {
-
-texto += "<li>"+element.nombre+ "</li>";
-});
-texto += "</ul>";
-
-     let datos = document.getElementById("listaServiciosJson");
-datos.innerHTML = texto;
-
-  
-  
-} 
-</script>
-
 <body  onload="obtenerServicios()">
+  
   <a href="https://wa.me/50671119228?text=Hola!%20%0AQuisiera%20realizar%20una%20reserva%20para%20mi%20perrito" class="btn-wsp" target="_blank">
     <i class="fa fa-whatsapp icono" id="icoWhat"></i>
 </a>
@@ -143,7 +115,7 @@ datos.innerHTML = texto;
         </div>
       </section><!-- End About Section -->
   
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Galeria Perritos   ======= -->
     <section id="portfolio" class="portfolio">      
      
       <div class="container">
@@ -225,7 +197,7 @@ datos.innerHTML = texto;
         </div>     
     </div>
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- FIN Galeria Perritos   -->
 
     <div class="container "  >
       <div id="testimonios" >
