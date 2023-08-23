@@ -9,8 +9,28 @@ function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%";
 }
 
-//Obtener servicios consumiendo JSON
+//Obtener servicios consumiendo un JSON de la misma ruta del proyecto: Servicios.json
+async function obtenerServicios() { 
+  const response = await fetch("./Servicios.json");
+  const json = await response.json();
+ 
+ 
+let texto;
 
+texto = "<ul>";
+
+   var elements = json;
+
+elements.forEach(element =>   {
+
+texto += "<li>"+element.nombre+ "</li>";
+});
+texto += "</ul>";
+
+     let datos = document.getElementById("listaServiciosJson");
+datos.innerHTML = texto;  
+  
+} 
 
 //Calculos: Edad
 function calcularEdad(fechaNacimiento) {
@@ -103,63 +123,147 @@ function calcularBano(cantPeso) {
   precio.innerHTML = " ₡"+res;   
 }
 
+
+//Consumo de API GOOGLE MAPS
+
+function initMap() {
+        
+  var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 7,
+    center: {lat: 10.01688810481482, lng: -84.2130290973807}
+ });
+  const hpUbicacion = {
+lat:  10.079013534733644,
+lng: -84.17806226152354,
+};   
+  infoWindow = new google.maps.InfoWindow();
+  infoWindow.setPosition(hpUbicacion);
+infoWindow.setContent("Happy Pets");
+infoWindow.open(map);
+map.setCenter(hpUbicacion);
+  const locationButton = document.createElement("button");
+
+locationButton.textContent = "Encontrar ruta";
+locationButton.classList.add("custom-map-control-button");
+map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+locationButton.addEventListener("click", () => {
+
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(
+
+(position) => {
+const pos = {
+lat: position.coords.latitude,
+lng: position.coords.longitude,
+};
+
+
+const hpUbicacion = {
+lat:  10.079013534733644,
+lng: -84.17806226152354,
+};   
+infoWindow.setPosition(hpUbicacion);
+infoWindow.setContent("Happy Pets");
+infoWindow.open(map);
+map.setCenter(hpUbicacion); 
+calculateAndDisplayRoute(directionsService, directionsDisplay,pos);
+},
+() => {
+handleLocationError(true, infoWindow, map.getCenter());
+},
+);
+} else {
+// Navegador no soporta la geolocalizacion
+handleLocationError(false, infoWindow, map.getCenter());
+}
+});
+ /* -------------*/
+  directionsDisplay.setMap(map);   
+
+}     
+
+
+//Manejo de Errores
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+infoWindow.setPosition(pos);
+infoWindow.setContent(
+browserHasGeolocation
+? "Error: The Geolocation service failed."
+: "Error: Your browser doesn't support geolocation.",
+);
+infoWindow.open(map);
+}    
+function calculateAndDisplayRoute(directionsService, directionsDisplay,originLoc) {     
+
+const hpUbicacion = {
+lat:  10.079013534733644,
+lng: -84.17806226152354,
+};   
+
+  directionsService.route({
+    origin: originLoc,
+    destination: hpUbicacion,
+    travelMode: 'DRIVING'
+  }, function(response, status) {
+    if (status === 'OK') {
+      directionsDisplay.setDirections(response);
+ 
+
+    } else {
+      window.alert('Directions request failed due to ' + status);
+    }
+  });
+}
+
+
 /**
-   * Porfolio isotope and filter
-   */
-window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
+ * Consumo de API REST de imagenes de Perritos
+ */
+var intervalId = window.setInterval(async function(){
+  const response = await fetch("https://dog.ceo/api/breeds/image/random");
+  const dogImage = await response.json();
+  var imageContainer = document.getElementById("imagenPerro");
+  imageContainer.src = dogImage?.message;
+}, 3000);
 
-      let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-      }, true);
-    }
 
-  });
 
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
 
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
 
-  /**
-   * Initiate portfolio details lightbox 
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
+/**
+ * Portfolio Galeria de perritos
+ */
+const portfolioLightbox = GLightbox({
+  selector: '.portfolio-lightbox'
+});
 
+/**
+ * Portfolio details slider
+ */
+new Swiper('.portfolio-details-slider', {
+  speed: 400,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
+
+/**
+ * Initiate portfolio details lightbox 
+ */
+const portfolioDetailsLightbox = GLightbox({
+  selector: '.portfolio-details-lightbox',
+  width: '90%',
+  height: '90vh'
+});
+ 
