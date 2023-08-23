@@ -9,29 +9,6 @@ function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%";
 }
 
-//Obtener servicios consumiendo un JSON de la misma ruta del proyecto: Servicios.json
-async function obtenerServicios() { 
-  const response = await fetch("./Servicios.json");
-  const json = await response.json();
- 
- 
-let texto;
-
-texto = "<ul>";
-
-   var elements = json;
-
-elements.forEach(element =>   {
-
-texto += "<li>"+element.nombre+ "</li>";
-});
-texto += "</ul>";
-
-     let datos = document.getElementById("listaServiciosJson");
-datos.innerHTML = texto;  
-  
-} 
-
 //Calculos: Edad
 function calcularEdad(fechaNacimiento) {
   var fechaProcesada = new Date(fechaNacimiento);
