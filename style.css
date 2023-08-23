@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
-
+/*General*/
 *{
  box-sizing: border-box;  
  margin: 0; 
@@ -12,6 +12,7 @@ body{
 background-color: #fff59d;
 
 }
+/*Nav*/
 
 .header{
     background-color: #baf5b4;
@@ -99,7 +100,7 @@ header .logo img:hover{
     }
 }
 
-/*Nav*/
+
 
 .header a {
     
@@ -135,9 +136,6 @@ align-items: center;
 justify-content: center;
 
 
- 
-
-
 }
 
 .header .overlay a {
@@ -147,10 +145,7 @@ justify-content: center;
     transition: all .3s ease 0s;
     font-weight: 700;
     color: #fff59d;
-    -webkit-text-stroke: 1px black;
- 
- 
-    
+    -webkit-text-stroke: 1px black;    
     
 }
 
@@ -163,13 +158,41 @@ justify-content: center;
     position: absolute;
     top: 20px;
     right: 45px;
-    font-size: 65px;
-    
-    
+    font-size: 65px;    
+ 
+}
 
 
-    
-    
+
+
+.header .nav-links .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #baf5b4;
+  border-color: black;
+  border-radius: 10%;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.header .nav-links .dropdown ul li {
+  min-width: 200px;
+
+}
+
+.header .nav-links .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+ 
+
 }
 
 @media screen and (max-height:450px){
@@ -183,16 +206,55 @@ justify-content: center;
         right: 35px;
     }
 }
+/*Links*/
 .linkMasInfo{
   color:rgb(237, 94, 94) ;
   text-decoration: none;
 }
+
+.infoPersonal{
+  color: #d9232d;
+}
+#link-desarrolladoPOr{
+  text-decoration: none;
+  color: #fff59d;
+  -webkit-text-stroke: 1px black;
+  transition: .3s;
+
+}
+ 
+
 
 .linkMasInfo:hover{
   color:rgb(255, 0, 0) ;
 }
 
 
+
+.red-social2 a{
+  margin-left: 18%;
+  display: inline-block;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: rgb(241, 36, 36) ;
+  margin-right: 10px;
+  background-color:rgb(255, 255, 255) ; 
+  text-align: center;
+  border-radius: 50px; 
+  transition: .3s;
+  transform: scale(1.6);
+ }
+ .red-social2 a:hover{
+  
+  transform: scale(1.9);
+}
+#invitamosASeguir{
+  margin-top: 10%;
+}
+
+/*Footer*/
 .pie-pagina{
     width: 100%;
     background-color:rgb(237, 94, 94) ;
@@ -260,39 +322,51 @@ padding: 15px 0px;
     transform: scale(1.2);
  
 }
+
+
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff59d;
+  margin-right: 10px;
+  background-color:rgb(240, 139, 139) ; 
+  text-align: center;
+  border-radius: 50px; 
+  transition: .3s;
+  font-size: 17px;
+}
+
+
+.pie-pagina .grupo-1 .red-social a:hover{
+  
+  transform: scale(1.2);
+}
+
+
+.pie-pagina .grupo-2  {
+  padding: 10px 10px; 
+  text-align: center;
+  -webkit-text-stroke: .7px black;
+  font-size: medium;
+
+}
+.pie-pagina .grupo-2 span {
+padding: 10px 10px; 
+text-align: center;
+-webkit-text-stroke: .7px black;
+font-size: x-small;
+
+}
+
+/*Whatsapp*/
 #icoWhat{
   
   transform: scale(2.1);
   padding-bottom: 20%;
 }
-
-#map{
- margin: auto;
- 
-}
-
-#floating-panel{
- 
- 
-  background-color: #FFF;
-  width: 50%;
-  border: 1px solid #999;
-  text-align: center;
-  font-family: 'Roboto','sans-serif';
- 
-}
-
-#mp3{
-  width:auto; 
-  height:100px;
-
-
-}
-
-#testimonios{
- padding-bottom: 5%;
-}
-
 
 .btn-wsp{
   position:fixed;
@@ -323,106 +397,37 @@ padding: 15px 0px;
 }
 }
 
-.infoPersonal{
-  color: #d9232d;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    color: #fff59d;
-    margin-right: 10px;
-    background-color:rgb(240, 139, 139) ; 
-    text-align: center;
-    border-radius: 50px; 
-    transition: .3s;
-    font-size: 17px;
-}
+/*Mapa*/
+
+#map{
+ margin: auto;
  
- 
-.pie-pagina .grupo-1 .red-social a:hover{
-    
-    transform: scale(1.2);
 }
 
-#link-desarrolladoPOr{
-  text-decoration: none;
-  color: #fff59d;
-  -webkit-text-stroke: 1px black;
-  transition: .3s;
-
-}
+#floating-panel{
  
-
- .red-social2 a{
-  margin-left: 18%;
-  display: inline-block;
-  text-decoration: none;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  color: rgb(241, 36, 36) ;
-  margin-right: 10px;
-  background-color:rgb(255, 255, 255) ; 
+ 
+  background-color: #FFF;
+  width: 50%;
+  border: 1px solid #999;
   text-align: center;
-  border-radius: 50px; 
-  transition: .3s;
-  transform: scale(1.6);
- }
- .red-social2 a:hover{
-  
-  transform: scale(1.9);
-}
-#invitamosASeguir{
-  margin-top: 10%;
-}
-
-.pie-pagina .grupo-2  {
-     padding: 10px 10px; 
-     text-align: center;
-     -webkit-text-stroke: .7px black;
-     font-size: medium;
-
-}
-.pie-pagina .grupo-2 span {
-  padding: 10px 10px; 
-  text-align: center;
-  -webkit-text-stroke: .7px black;
-  font-size: x-small;
-
-}
-
-.header .nav-links .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 14px;
-    top: calc(100% + 30px);
-    margin: 0;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #baf5b4;
-    border-color: black;
-    border-radius: 10%;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-  }
-
-  .header .nav-links .dropdown ul li {
-    min-width: 200px;
-  
-  }
-
-  .header .nav-links .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-   
+  font-family: 'Roboto','sans-serif';
  
-  }
+}
+
+/*Audio*/
+#mp3{
+  width:auto; 
+  height:100px;
+
+
+}
+/*Testimonios*/
+#testimonios{
+ padding-bottom: 5%;
+}
+
+
 
 
 
@@ -852,9 +857,11 @@ margin-top: 10%;
   border-radius: 3%;
  
 }
+ 
+
 
 /*--------------------------------------------------------------
-# Portfolio
+# Portfolio GALERIA DE PERRITOS
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
@@ -977,7 +984,7 @@ margin-top: 10%;
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# Portfolio Details  GALERIA DE PERRITOS
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
